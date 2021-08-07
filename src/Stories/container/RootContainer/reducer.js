@@ -2,8 +2,8 @@ import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from './actions';
 
 const initialState = {
   userData: {
-    defaultEmail: 'coffee@gamil.com',
-    defaultPassword: 'coffee123',
+    defaultEmail: 'qwerty@gmail.com',
+    defaultPassword: 'qwerty123',
   },
   loading_login: false,
   isLoggedIn: false,

@@ -9,6 +9,7 @@ function* loginAction(data) {
     const state = yield select();
     const {defaultEmail, defaultPassword} = state.RootReducer.userData;
     const {email, password} = data.data;
+    console.log(email, password, defaultEmail, defaultPassword, defaultEmail == email , defaultPassword == password);
     if (defaultEmail === email && defaultPassword === password) {
       yield put({type: LOGIN_SUCCESS});
     } else {

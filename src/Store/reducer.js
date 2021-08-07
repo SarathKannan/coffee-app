@@ -3,7 +3,7 @@ import {persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import homeReducer from '../Stories/container/HomeContainer/reducer';
-import RootReducer from '../Stories/container/RootContainer/reducer';
+import _rootReducer from '../Stories/container/RootContainer/reducer';
 import serviceReducer from '../Service/ServiceReducer';
 
 const config = {
@@ -16,6 +16,7 @@ const service_config = {
 };
 
 const HomeReducer = persistReducer(config, homeReducer);
+const RootReducer = persistReducer(config, _rootReducer);
 const ServiceReducer = persistReducer(service_config, serviceReducer);
 
 const appReducer = combineReducers({
