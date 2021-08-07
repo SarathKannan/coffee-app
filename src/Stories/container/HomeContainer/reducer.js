@@ -2,11 +2,13 @@ import {
   GET_HOME_DATA,
   GET_HOME_DATA_FAILURE,
   GET_HOME_DATA_SUCCESS,
+  GET_ITEM_DETAILS,
 } from './actions';
 
 const initialState = {
   isLoading_data: false,
   dataList: [],
+  itemDetails : {},
 };
 
 export default function (state = initialState, action) {
@@ -26,6 +28,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         isLoading_data: false,
+      };
+    case GET_ITEM_DETAILS:
+      return {
+        ...state,
+        itemDetails : action.data,
       };
     default:
       return {...state};

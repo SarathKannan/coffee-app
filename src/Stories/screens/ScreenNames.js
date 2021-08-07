@@ -12,8 +12,7 @@
 
  export default {
     Login: 'Login',
-    Welcome: 'Welcome',
-    Register: 'Register',
+    Details: 'Details',
     Home: 'Home',
  };
  

@@ -15,12 +15,13 @@ import styles from './styles';
 const Home = props => {
   const {
     HomeReducer: {dataList, isLoading_data},
+    getDetails,
   } = props;
   function _renderItem({item}) {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => {}}
+        onPress={() => {getDetails(item)}}
         style={styles.cardMain}>
         <Card data={item} />
       </TouchableOpacity>
