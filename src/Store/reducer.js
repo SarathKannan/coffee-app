@@ -4,21 +4,20 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import homeReducer from '../Stories/container/HomeContainer/reducer';
 import _rootReducer from '../Stories/container/RootContainer/reducer';
-import serviceReducer from '../Service/ServiceReducer';
+import ServiceReducer from '../Service/ServiceReducer';
 import {LOGOUT_REQUEST} from '../Stories/container/RootContainer/actions';
 
 const config = {
   key: 'root',
   storage: AsyncStorage,
 };
-const service_config = {
-  key: 'service',
+const root_config = {
+  key: 'root_config',
   storage: AsyncStorage,
 };
 
 const HomeReducer = persistReducer(config, homeReducer);
-const RootReducer = persistReducer(config, _rootReducer);
-const ServiceReducer = persistReducer(service_config, serviceReducer);
+const RootReducer = persistReducer(root_config, _rootReducer);
 
 const appReducer = combineReducers({
   HomeReducer,
