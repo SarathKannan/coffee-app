@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import homeReducer from '../Stories/container/HomeContainer/reducer';
 import _rootReducer from '../Stories/container/RootContainer/reducer';
 import serviceReducer from '../Service/ServiceReducer';
+import {LOGOUT_REQUEST} from '../Stories/container/RootContainer/actions';
 
 const config = {
   key: 'root',
@@ -25,6 +26,9 @@ const appReducer = combineReducers({
   RootReducer,
 });
 const rootReducer = (state, action) => {
+  if (action.type === LOGOUT_REQUEST) {
+    state = undefined;
+  }
   return appReducer(state, action);
 };
 

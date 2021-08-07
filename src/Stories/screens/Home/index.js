@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import {Colors} from '../../../Theme';
+import BackButton from '../../components/BackButton';
 import Card from '../../components/Card';
 import ImageHolder from '../../components/ImageHolder';
 import styles from './styles';
@@ -16,12 +17,15 @@ const Home = props => {
   const {
     HomeReducer: {dataList, isLoading_data},
     getDetails,
+    logOutAction
   } = props;
   function _renderItem({item}) {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => {getDetails(item)}}
+        onPress={() => {
+          getDetails(item);
+        }}
         style={styles.cardMain}>
         <Card data={item} />
       </TouchableOpacity>
@@ -36,6 +40,9 @@ const Home = props => {
         <View style={styles.textContainer}>
           <Text style={styles.text}>It's a great day for</Text>
           <Text style={styles.text}>a coffee</Text>
+        </View>
+        <View style={styles.logOutBtn}>
+          <BackButton icon="logout" size={23} onPress={() => logOutAction()} />
         </View>
       </View>
       <View style={styles.listContainer}>

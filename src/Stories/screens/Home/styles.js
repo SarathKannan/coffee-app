@@ -59,5 +59,8 @@ const styles = StyleSheet.create({
     paddingHorizontal : 10,
     backgroundColor : Colors.WHITE,
   },
+  logOutBtn : {
+    position : 'absolute',
+  },
 });
 export default styles;

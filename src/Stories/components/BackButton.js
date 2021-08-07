@@ -9,6 +9,7 @@ const BackButton = ({
   iconColor = '#ffffff',
   onPress = () => {},
   mode = 0,
+  icon = 'back'
 }) => {
   return mode === 1 ? (
     <View
@@ -50,7 +51,7 @@ const BackButton = ({
         zIndex: 10,
       }}
       onPress={onPress}>
-      <AntDesign name="back" size={size} color={iconColor} />
+      <AntDesign name={icon} size={size} color={iconColor} />
     </TouchableOpacity>
   );
 };
