@@ -1,0 +1,10 @@
+export default {
+  PRIMERY_COLOR: '#F8E8D4',
+  PRIMERY_COLOR_DARK: '#8C746A',
+  PRIMERY_COLOR_BUTTON : '#B98068',
+  WHITE: '#ffffff',
+  LIGHT_GRAY: '#f5f5f5',
+  GRAY: '#e9e9e9',
+  DARK_GRAY: '#212121',
+  BLACK: '#000000',
+};

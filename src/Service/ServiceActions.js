@@ -1,0 +1,1 @@
+export const HIDE_SPLASH_SCREEN = 'HIDE_SPLASH_SCREEN';
