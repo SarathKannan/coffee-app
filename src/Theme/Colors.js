@@ -18,4 +18,5 @@ export default {
   GRAY: '#e9e9e9',
   DARK_GRAY: '#212121',
   BLACK: '#000000',
+  WHITE_SHADED: '#F2F2F2',
 };

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 5,
     marginVertical: 8,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.WHITE,
     borderRadius: 5,
     flexDirection: 'row',
     ...Shadow,
